@@ -1,9 +1,20 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import db from '@/lib/db';
 import { GET_USER_VENUE_BENEFITS_QUERY } from '@/lib/queries';
 
-export async function GET(_: Request, { params }: { params: { userid: string, venueid: string } }) {
-    const { userid: userIdStr, venueid: venueIdStr } = params;
+interface GetRouteContext {
+    params: {
+        userid: string;
+        venueid: string;
+    };
+}
+
+export async function GET(
+    request: NextRequest,
+    context: GetRouteContext
+) {
+    const { userid: userIdStr, venueid: venueIdStr } = context.params;
+
     const userId = parseInt(userIdStr, 10);
     const venueId = parseInt(venueIdStr, 10);
 
