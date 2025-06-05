@@ -48,12 +48,7 @@ export async function GET(
             );
         }
     } catch (error: unknown) {
-        // this will catch errors from awaiting paramsPromise or parseInt
-        let message = "An unexpected error occurred while processing the request.";
-        if (error instanceof Error) {
-            message = error.message;
-        }
-        console.error(`[API ERROR] GET /api/benefits/[userid]/[venueid]: ${message}`, error);
+        console.error('Error in POST /api/benefits/[userid]/[venueid]:', error);
         return NextResponse.json({ error: "Failed to process your request." }, { status: 500 });
     }
 }
