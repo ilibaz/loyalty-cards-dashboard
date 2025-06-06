@@ -254,9 +254,7 @@ const BenefitsList = ({
             className="flex flex-col sm:flex-row justify-between items-start sm:items-center border border-slate-200 p-4 rounded-lg transition-all duration-150 ease-in-out hover:shadow-lg hover:border-indigo-300 bg-slate-50/50"
           >
             <div className="mb-3 sm:mb-0 flex-grow">
-              <p className="font-semibold text-lg text-slate-800">
-                {b.description || b.name}
-              </p>
+              <p className="font-semibold text-lg text-slate-800">{b.name}</p>
               <p
                 className={`text-sm font-medium tracking-wide ${
                   b.used ? "text-red-600" : "text-emerald-600"
