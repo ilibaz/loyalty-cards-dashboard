@@ -1,4 +1,17 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Overview
+A simple web application that allows a user to **view and use loyalty benefits** provided by a venue *(restaurant, bar, café, etc.)*.
+
+## Tech Used
+
+- **Frontend & Backend**: [Next.js](https://nextjs.org/) (React + API routes)  
+- **UI Library**: React (with TypeScript)  
+- **Database**: [PostgreSQL](https://www.postgresql.org/) 
+- **Containerization**: [Docker](https://www.docker.com/) + Docker Compose   
+
+> **Key Features**
+> - Show list of benefits a user is eligible for  
+> - Track which benefits have been used  
+> - Prevent multiple uses of the same benefit  
 
 ## Getting Started
 
